@@ -1,9 +1,9 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
 
-function ItemForm(props) {
+function ItemForm({addNewItem}) {
   return (
-    <form className="NewItem">
+    <form className="NewItem" onSubmit={addNewItem}>
       <label>
         Name:
         <input type="text" name="name" />
@@ -18,7 +18,7 @@ function ItemForm(props) {
         </select>
       </label>
 
-      <button type="submit">Add to List</button>
+      <button type="submit" >Add to List</button>
     </form>
   );
 }
